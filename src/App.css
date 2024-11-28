@@ -1,38 +1,88 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  background-image: url("https://m.media-amazon.com/images/M/MV5BMzU1MzAyNzUtY2FlZi00YTg1LTg2OGQtZjZjYzg3YWVlNGMyXkEyXkFqcGdeQW1yb2Njbw@@._V1_.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cards-wrapper {
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 8px;
+  width: 70%;
+  height: 80vh;
+  overflow-y: scroll;
+  margin: 10vh auto;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.card {
+  border: 1px solid orange;
+  border-radius: 8px;
+  padding: 8px;
+  text-decoration: none;
+}
+
+.card h3 {
+  text-align: center;
+  color: green;
+  font-size: 22px;
+}
+
+.card button {
+  width: 100%;
+  border: none;
+  background-color: orange;
+  color: white;
+  border-radius: 8px;
+  padding: 6px 0;
+}
+
+.single-page {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.episodes {
+  display: flex;
+  flex-direction: column;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.episodes > p {
+  margin: 10px 0;
+  font-size: 24px;
+  color: blue;
+  cursor: pointer;
+}
+
+.pagination {
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination > button {
+  padding: 10px;
+  text-align: center;
+}
+.active-page {
+  background-color: green;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
